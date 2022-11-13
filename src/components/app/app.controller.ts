@@ -1,15 +1,19 @@
 import AppView from './app.view';
 import { IAppController } from './types';
+import CardsController from '../cards/cards.controller';
 
 export default class AppController implements IAppController {
   private view;
 
+  private cards;
+
   constructor() {
     this.view = new AppView();
-    this.view.listnerSearchButton();
+    this.cards = new CardsController();
+    this.view.listnerSearchButton(this.cards.getSearchValue);
   }
 
   initApp(): void {
-    console.log('init app');
+    this.cards.init();
   }
 }

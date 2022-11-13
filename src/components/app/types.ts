@@ -3,7 +3,9 @@ interface IAppController {
 }
 
 interface IAppView {
-  listnerSearchButton(): void;
+  listnerSearchButton(handler: SearchHandler): void;
 }
 
-export { IAppController, IAppView };
+type SearchHandler = (query: string) => void;
+
+export { IAppController, IAppView, SearchHandler };
