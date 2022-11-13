@@ -67,6 +67,10 @@
               transform: skew(0deg);
             }
           }
+
+          .fa-magnifying-glass {
+            transform: skew(45deg);
+          }
         }
       }
       .spaceship {
@@ -77,7 +81,7 @@
         height: auto;
         offset-path: path('m-259.532715,95.338944c0,-53.028619 115.873691,-95.981801 258.927631,-95.981801c143.05394,0 258.927631,42.953182 258.927631,95.981801c0,53.028619 -115.873691,95.981801 -258.927631,95.981801c-143.05394,0 -258.927631,-42.953182 -258.927631,-95.981801z');
         animation: move 20s linear infinite;
-        offset-rotate: auto 90deg;
+        offset-rotate: auto 0deg;
       }
     }
   }
