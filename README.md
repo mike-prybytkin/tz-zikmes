@@ -1,2 +1,2 @@
 # tz-zikmes
-[Ссыллка на задание](https://gitrequests.github.io/frontend-interview/ "ТЗ ЗИКМЕС")
+[Ссылка на задание](https://gitrequests.github.io/frontend-interview/ "ТЗ ЗИКМЕС")
