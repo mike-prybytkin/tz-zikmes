@@ -1,0 +1,13 @@
+$backgoundColorHeader: #5E2201;
+$backgoundColorButton: #9E3802;
+$lightColor: #ffffff;
+$darkColor: #000000;
+
+$wrapper-width: 98%;
+$tablet-width: 767px;
+
+@mixin flex ($justify: center, $align: flex-start) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}

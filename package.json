@@ -1,5 +1,5 @@
 {
-  "name": "rs-lang",
+  "name": "tz-zikmes",
   "version": "1.0.0",
   "description": "",
   "main": "webpack.base.config.js",
@@ -13,7 +13,7 @@
     "url": ""
   },
   "keywords": [],
-  "author": "rs-lang",
+  "author": "tz-zikmes",
   "license": "ISC",
   "homepage": "",
   "devDependencies": {
