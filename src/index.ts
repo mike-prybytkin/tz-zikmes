@@ -1,3 +1,5 @@
 import './style/index.scss';
+import AppController from './components/app/app.controller';
 
-console.log('Hello');
+const App = new AppController();
+App.initApp();

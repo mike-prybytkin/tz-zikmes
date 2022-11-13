@@ -1,0 +1,74 @@
+#body {
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(circle at right bottom, $backgoundColorButton 0%, $backgoundColorHeader 8%, #DE4F02 30%, #EB5303 40%, #C44602, transparent 120%);
+
+  .header {
+    .header-wrapper {
+      padding-top: 80px;
+      @include flex;
+      width: $wrapper-width;
+      
+      .search-wrapper {
+        @include flex;
+        width: 300px;
+        height: 47px;
+        transform: skew(-45deg);
+        border: 2px $backgoundColorHeader solid;
+  
+        @media (max-width: $tablet-width) {
+          transform: skew(0deg);
+        }
+  
+        .search-wrapper__input {
+          transform: skew(45deg);
+          height: 100%;
+          font-size: 1.2rem;
+          padding: 0 12px;
+          margin: 0;
+          border: none;
+          color: $darkColor;
+  
+          &::placeholder {
+            color: $lightColor;
+          }
+  
+          &:focus {
+            box-shadow: none;
+            border: none;
+          }
+  
+          @media (max-width: $tablet-width) {
+            transform: skew(0deg);
+          }
+        }
+  
+        .search-wrapper__button {
+          border: none;
+          border-left: 2px $backgoundColorHeader solid;
+          height: 43px;
+          padding: 4px 10px;
+          cursor: pointer;
+          background: $backgoundColorButton;
+          color: $lightColor;
+          letter-spacing: 0.2rem;
+          text-transform: uppercase;
+          transition: all 0.3s ease-in-out;
+  
+          &:hover {
+            background: $backgoundColorHeader;
+          }
+  
+          .search-button-text {
+            display: inline-block;
+            transform: skew(45deg);
+  
+            @media (max-width: $tablet-width) {
+              transform: skew(0deg);
+            }
+          }
+        }
+      }
+    }
+  }
+}
