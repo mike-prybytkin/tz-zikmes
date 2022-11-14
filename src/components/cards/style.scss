@@ -1,0 +1,23 @@
+.fetch-card {
+  width: 160px;
+  min-height: 260px;
+  border: 2px $backgoundColorHeader solid;
+  border-radius: 10px;
+  text-align: center;
+  background-color: $backgoundColorCards;
+
+  .fetch-card__picture {
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+  }
+
+  .fetch-card__name {
+    height: 100%;
+    font-size: 1.4rem;
+    margin: 10px;
+  }
+}
+
+.message-template {
+  font-size: 1.4rem;
+}

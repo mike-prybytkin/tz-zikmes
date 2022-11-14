@@ -1,0 +1,27 @@
+$backgoundColorHeader: #5E2201;
+$backgoundColorButton: #9E3802;
+$backgoundColorCards: #ff6816;
+$lightColor: #ffffff;
+$darkColor: #000000;
+
+$wrapper-width: 98%;
+$tablet-width: 767px;
+
+@mixin flex ($justify: center, $align: flex-start) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+%button {
+  border: none;
+  padding: 4px 10px;
+  cursor: pointer;
+  background: $backgoundColorButton;
+  color: $lightColor;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background: $backgoundColorHeader;
+  }
+}
