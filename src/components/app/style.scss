@@ -3,6 +3,16 @@
   background: radial-gradient(circle at right bottom, $backgoundColorButton 0%, $backgoundColorHeader 8%, #DE4F02 30%, #EB5303 40%, #C44602, transparent 120%);
 
   .header {
+    .back-home-button {
+      top: 1%;
+      left: 1%;
+      position: absolute;
+      @extend %button;
+      width: 150px;
+      height: 30px;
+      border-radius: 5px;
+
+    }
     .header-wrapper {
       padding: 0 2%;
       padding-top: 80px;
@@ -44,20 +54,11 @@
         }
   
         .search-wrapper__button {
-          border: none;
+          @extend %button;
           border-left: 2px $backgoundColorHeader solid;
-          height: 43px;
-          padding: 4px 10px;
-          cursor: pointer;
-          background: $backgoundColorButton;
-          color: $lightColor;
           letter-spacing: 0.2rem;
           text-transform: uppercase;
-          transition: all 0.3s ease-in-out;
-  
-          &:hover {
-            background: $backgoundColorHeader;
-          }
+          height: 43px;
   
           .search-button-text {
             display: inline-block;

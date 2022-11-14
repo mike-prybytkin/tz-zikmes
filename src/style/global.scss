@@ -12,3 +12,16 @@ $tablet-width: 767px;
   justify-content: $justify;
   align-items: $align;
 }
+
+%button {
+  border: none;
+  padding: 4px 10px;
+  cursor: pointer;
+  background: $backgoundColorButton;
+  color: $lightColor;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background: $backgoundColorHeader;
+  }
+}

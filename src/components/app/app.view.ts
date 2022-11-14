@@ -1,4 +1,4 @@
-import { IAppView, SearchHandler } from './types';
+import { IAppView, SearchHandler, BackHomeHandler } from './types';
 import Selector from '../../constants/constants';
 import showToastMessage from '../UI/toast-message/toast-message';
 
@@ -20,5 +20,12 @@ export default class AppView implements IAppView {
   private validationInput(value: string) {
     if (value.trim()) return true;
     return false;
+  }
+
+  listnerBackHomeButton(handler: BackHomeHandler): void {
+    const backHomeButton = document.querySelector(Selector.backHomeButton) as HTMLButtonElement;
+    backHomeButton.addEventListener('click', () => {
+      handler();
+    });
   }
 }

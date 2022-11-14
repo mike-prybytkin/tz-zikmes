@@ -11,6 +11,7 @@ export default class AppController implements IAppController {
     this.view = new AppView();
     this.cards = new CardsController();
     this.view.listnerSearchButton(this.cards.getSearchValue);
+    this.view.listnerBackHomeButton(this.cards.getSearchValue);
   }
 
   initApp(): void {
