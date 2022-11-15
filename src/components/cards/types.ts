@@ -1,16 +1,18 @@
 import { IFetchCard } from '../../share/types';
 
 interface ICardView {
-  renderCards(data: IFetchCard[]): void;
+  renderCards(data: FetchDataType): void;
 }
 
 interface ICardController {
-  init(): void;
+  getCards(): void;
   getSearchValue(query?: string): void;
 }
 
 interface ICardModel {
-  getCards(query: string): Promise<IFetchCard[] | undefined>;
+  getCards(query: string): Promise<FetchDataType>;
 }
 
-export { ICardController, ICardView, ICardModel };
+type FetchDataType = IFetchCard[] | null;
+
+export { ICardController, ICardView, ICardModel, FetchDataType };

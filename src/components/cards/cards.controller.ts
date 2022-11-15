@@ -12,19 +12,12 @@ export default class CardsController implements ICardController {
     this.view = new CardView();
   }
 
-  init() {
-    this.getCards();
+  async getCards(query?: string) {
+    const data = (await this.model.getCards(query)) || null;
+    this.view.renderCards(data);
   }
 
-  private async getCards(query?: string) {
-    this.view.renderCards([]);
-    const data = await this.model.getCards(query);
-    if (data) {
-      this.view.renderCards(data);
-    }
-  }
-
-  getSearchValue = (query?: string) => {
+  getSearchValue = (query?: string): void => {
     this.getCards(query);
   };
 }

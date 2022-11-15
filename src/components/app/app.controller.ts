@@ -15,6 +15,6 @@ export default class AppController implements IAppController {
   }
 
   initApp(): void {
-    this.cards.init();
+    this.cards.getCards();
   }
 }

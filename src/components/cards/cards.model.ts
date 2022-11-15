@@ -10,6 +10,6 @@ export default class CardsModel implements ICardModel {
 
   async getCards(query?: string) {
     const data = await this.api.fetchData(query);
-    return data?.results;
+    return data?.results || null;
   }
 }
