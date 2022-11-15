@@ -1,11 +1,11 @@
-import { ICardView } from './types';
+import { ICardView, FetchDataType } from './types';
 import Selector from '../../constants/constants';
 import { IFetchCard } from '../../share/types';
 
 export default class CardView implements ICardView {
-  renderCards(data: IFetchCard[]) {
+  renderCards(data: FetchDataType) {
     const mainWrapper = document.querySelector(Selector.mainWrapper) as HTMLElement;
-    if (data.length > 1) {
+    if (data) {
       mainWrapper.innerHTML = this.cardsTemplate(data);
     } else {
       mainWrapper.innerHTML = this.messageTemplate('Cards not found...');
